@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        (function() {
+            var links = [
+                { url: "https://linkB.com", weight: 80 },  // 80% chuyển qua linkB
+                { url: "https://linkC.com", weight: 20 }   // 20% chuyển qua linkC
+            ];
+
+            var random = Math.random() * 100;
+            var cumulativeWeight = 0;
+
+            for (var i = 0; i < links.length; i++) {
+                cumulativeWeight += links[i].weight;
+                if (random < cumulativeWeight) {
+                    location.replace(links[i].url);
+                    break;
+                }
+            }
+        })();
+    </script>
+</head>
+<body></body>
+</html>
