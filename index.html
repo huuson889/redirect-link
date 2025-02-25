@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang chuyển hướng...</title>
+    <script>
+        window.onload = function() {
+            var links = ["https://linkB.com", "https://linkC.com"]; // Thay bằng link thực tế của bạn
+            var randomLink = links[Math.floor(Math.random() * links.length)];
+            window.location.href = randomLink;
+        };
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Đang chuyển hướng...</h2>
+    <p>Nếu bạn không được chuyển tự động, <a id="redirectLink" href="#">nhấn vào đây</a>.</p>
+
+    <script>
+        document.getElementById("redirectLink").href = links[Math.floor(Math.random() * links.length)];
+    </script>
+</body>
+</html>
