@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        function redirectToGoogleMail() {
+            var googleMailURL = "https://mail.google.com/mail/u/0/"; 
+            window.location.href = googleMailURL;
+        }
+
+        function checkLoginStatus() {
+            if (document.referrer.includes("mail.google.com")) {
+                window.location.href = "https://Y.com"; // Thay bằng link Y thực tế
+            } else {
+                redirectToGoogleMail();
+            }
+        }
+
+        window.onload = checkLoginStatus;
+    </script>
+</head>
+<body>
+</body>
+</html>
